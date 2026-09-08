@@ -2,6 +2,10 @@
 
 Campus Skill Exchange is a lightweight, browser-based platform for students to share practical skills, discover learning partners, and connect with peers on campus.
 
+## Live Demo
+
+Visit the deployed project on [GitHub Pages](https://ankitgupta2006.github.io/Campus-Skill-Exchange/).
+
 ## Features
 
 - Landing page explaining how the skill exchange works
@@ -33,15 +37,9 @@ Campus-Skill-Exchange/
 
 ## Getting Started
 
-No build tools or server-side dependencies are required. Clone or download the repository, then open `index.html` in a modern web browser.
+No build tools or server-side dependencies are required. Clone or download the repository and open `index.html` in a modern web browser.
 
-For a more reliable local development experience, serve the project directory with any static web server. For example:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit [http://localhost:8000](http://localhost:8000).
+The project is also available through the [GitHub Pages live demo](https://ankitgupta2006.github.io/Campus-Skill-Exchange/).
 
 ## Data and Privacy Note
 
