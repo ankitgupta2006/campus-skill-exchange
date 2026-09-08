@@ -4,7 +4,7 @@ Campus Skill Exchange is a lightweight, browser-based platform for students to s
 
 ## Live Demo
 
-Visit the deployed project on [GitHub Pages](https://ankitgupta2006.github.io/Campus-Skill-Exchange/).
+Visit the deployed project on [GitHub Pages](https://ankitgupta2006.github.io/campus-skill-exchange/).
 
 ## Features
 
@@ -39,7 +39,7 @@ Campus-Skill-Exchange/
 
 No build tools or server-side dependencies are required. Clone or download the repository and open `index.html` in a modern web browser.
 
-The project is also available through the [GitHub Pages live demo](https://ankitgupta2006.github.io/Campus-Skill-Exchange/).
+The project is also available through the [GitHub Pages live demo](https://ankitgupta2006.github.io/campus-skill-exchange/).
 
 ## Data and Privacy Note
 
