@@ -122,6 +122,6 @@ if (loginForm) {
     }
 
     alert("Login successful!");
-    window.location.href = "profiles.html";
+    window.location.href = "dashboard.html";
   });
 }
