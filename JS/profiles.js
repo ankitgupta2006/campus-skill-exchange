@@ -4,7 +4,7 @@ const sampleProfiles = [
   {
     id: 1,
     name: "Ankit Gupta",
-    email: "aanya@example.com",
+    email: "ankitgupta@gmal.com",
     college: "Campus University",
     course: "B.Sc Computer Science",
     skills: "UX Research, Interaction Design",
@@ -13,7 +13,7 @@ const sampleProfiles = [
   {
     id: 2,
     name: "Harsh Srivastava",
-    email: "sarah@example.com",
+    email: "harshsrivastava@gmal.com",
     college: "Campus University",
     course: "B.Des",
     skills: "UX Design, UI Design",
@@ -22,7 +22,7 @@ const sampleProfiles = [
   {
     id: 3,
     name: "Deepshikha Mall",
-    email: "david@example.com",
+    email: "deepshikhamall@gmal.com",
     college: "Campus University",
     course: "B.A Media",
     skills: "Photography, Video Editing",
@@ -31,7 +31,7 @@ const sampleProfiles = [
   {
     id: 4,
     name: "Harshit Singh",
-    email: "anya@example.com",
+    email: "harshitsingh@gmal.com",
     college: "Campus University",
     course: "B.A Languages",
     skills: "Spanish, Communication",
@@ -40,7 +40,7 @@ const sampleProfiles = [
   {
     id: 5,
     name: "Vikki Kumar",
-    email: "ankit@example.com",
+    email: "vikkikumar@gmal.com",
     college: "Campus University",
     course: "B.Sc Mathematics",
     skills: "React Basics, Computer Application",
