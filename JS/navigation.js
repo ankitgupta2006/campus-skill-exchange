@@ -42,7 +42,12 @@ function addSessionNavigation() {
       const dashboardLink = document.createElement("a");
       dashboardLink.href = getPagePath("dashboard.html");
       dashboardLink.textContent = "Dashboard";
-      navigation.prepend(dashboardLink);
+      const homeLink = navigation.querySelector('a[href$="index.html"]');
+      if (homeLink?.nextSibling) {
+        navigation.insertBefore(dashboardLink, homeLink.nextSibling);
+      } else {
+        navigation.appendChild(dashboardLink);
+      }
     }
 
     if (!logoutButton) {
