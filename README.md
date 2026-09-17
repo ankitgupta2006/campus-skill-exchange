@@ -1,65 +1,174 @@
 # Campus Skill Exchange
 
-Campus Skill Exchange is a lightweight, browser-based platform for students to share practical skills, discover learning partners, and connect with peers on campus.
+Campus Skill Exchange is a responsive browser-based platform that helps students discover practical skills, share what they know, and connect with peers for learning exchanges. The project uses beginner-friendly HTML, CSS, and JavaScript with browser `localStorage` for its demo data layer.
 
 ## Live Demo
 
 Visit the deployed project on [GitHub Pages](https://ankitgupta2006.github.io/campus-skill-exchange/).
 
+## Current Pages
+
+The project includes nine complete page experiences:
+
+| Page | Purpose |
+| --- | --- |
+| Home | Campus hero banner, hero search, platform benefits, learning process, and calls to action |
+| About | Platform purpose, student benefits, and four-step explanation |
+| Skills | Searchable and filterable skill cards for technology, academic, creative, and communication skills |
+| Profiles | Searchable student profile cards with exchange-request actions |
+| Register | Student account and skill registration form |
+| Login | Student authentication form |
+| Dashboard | Student profile summary, skill list, notifications, requests, editing, and logout |
+| Admin Login | Protected administrator login with temporary demo credentials |
+| Admin Dashboard | Student directory, profile removal, reports, settings, statistics, and logout |
+
 ## Features
 
-- Landing page explaining how the skill exchange works
-- Student registration and login forms
-- Dedicated student dashboard after login
-- Profile summary with editable student information
-- Exchange-request notifications on the dashboard
-- Accept and decline actions for incoming exchange requests
-- Send exchange requests directly from student profiles
-- Searchable student profiles by name, skill, course, or college
-- Sample profiles for demonstrating the experience
-- Responsive pages styled with custom CSS
+### Student Features
+
+- Responsive teal-and-white interface for desktop, tablet, and mobile devices.
+- Functional hero search that sends a query to the Profiles page.
+- Student registration with name, email, college, course, skills, and password.
+- Student login and protected dashboard access.
+- Editable student profile information.
+- Searchable profiles by name, skill, course, or college.
+- Skill search and category filtering.
+- Exchange requests with custom messages.
+- Accept and decline actions for incoming requests.
+- Session logout and browser-based persistence.
+- Sample profiles for demonstrating the platform before registration.
+
+### Admin Features
+
+- Separate Admin Login page.
+- Protected Admin Dashboard route.
+- Dashboard statistics for students, skills, and reported profiles.
+- Student directory with remove-profile actions.
+- Reported Profiles section.
+- Settings section placeholder for future platform configuration.
+- Admin logout.
+
+### Temporary Admin Access
+
+The current demo uses the following temporary credentials:
+
+```text
+Email: admin@campus.local
+Password: admin123
+```
+
+These credentials are intended only for local demonstration. They are not suitable for production authentication.
+
+## Design System
+
+The interface uses a consistent visual language across all nine pages:
+
+- **Primary color:** teal and deep teal
+- **Surface colors:** white, aqua, light blue, soft cream, and lavender
+- **Typography:** Nunito with accessible sizing for navigation and forms
+- **Components:** rounded cards, soft borders, readable buttons, responsive layouts, and illustrated banners
+- **Responsive behavior:** navigation, cards, forms, tables, banners, and dashboard panels adapt across desktop, tablet, and mobile widths
+
+The illustrations are stored as reusable PNG assets under `assets/illustrations/`. The project no longer depends on screenshot crops or PDF fragments for page artwork.
 
 ## Project Structure
 
 ```text
 Campus-Skill-Exchange/
 ├── index.html
-├── JS/
-│   ├── auth.js
-│   ├── dashboard.js
-│   └── profiles.js
+├── README.md
+├── .gitignore
+├── assets/
+│   ├── logo.svg
+│   ├── icons/
+│   │   ├── academic.svg
+│   │   ├── coding.svg
+│   │   ├── communication.svg
+│   │   ├── design.svg
+│   │   ├── languages.svg
+│   │   └── photography.svg
+│   └── illustrations/
+│       ├── about-banner-art.png
+│       ├── admin-dashboard-banner.png
+│       ├── admin-login-campus.png
+│       ├── home-campus.png
+│       ├── login-campus.png
+│       ├── profiles-students.png
+│       ├── register-campus.png
+│       ├── skills-banner-art.png
+│       └── student-dashboard-banner.png
 ├── css/
+│   ├── style.css
 │   ├── authentication.css
 │   ├── dashboard.css
 │   ├── profiles.css
-│   └── style.css
+│   ├── skills.css
+│   └── admin.css
+├── JS/
+│   ├── navigation.js
+│   ├── home.js
+│   ├── skills.js
+│   ├── profiles.js
+│   ├── auth.js
+│   ├── dashboard.js
+│   └── admin.js
 └── pages/
     ├── about.html
-    ├── dashboard.html
-    ├── login.html
+    ├── skills.html
     ├── profiles.html
     ├── register.html
-    └── skills.html
+    ├── login.html
+    ├── dashboard.html
+    ├── admin-login.html
+    └── admin-dashboard.html
 ```
 
 ## User Flow
 
-1. Register a student profile with a name, email, college, course, skills, and password.
-2. Log in using the registered email and password.
-3. Use the student dashboard to review profile information and incoming exchange requests.
-4. Visit the profiles section to search for students and send an exchange request.
-5. Accept or decline incoming requests from the dashboard notifications section.
-6. Edit profile details or log out from the dashboard.
+1. Open the home page and search for a skill, student, or course, or choose **Register**.
+2. Create a student profile with basic information and skills.
+3. Sign in using the registered email and password.
+4. Review the personal dashboard and edit profile details when needed.
+5. Search Skills or Profiles to find a learning partner.
+6. Send an exchange request with a message.
+7. Accept or decline incoming requests from the dashboard.
+8. Log out from the student dashboard when finished.
+
+## Admin Flow
+
+1. Open the Admin Login page from the public navigation or `/pages/admin-login.html`.
+2. Use the temporary demo credentials shown above.
+3. Manage the sample student directory from the Admin Dashboard.
+4. Review the reports and settings sections.
+5. Use **Logout** to end the administrator session.
 
 ## Getting Started
 
-No build tools or server-side dependencies are required. Clone or download the repository and open `index.html` in a modern web browser.
+No build tools or server-side dependencies are required.
 
-The project is also available through the [GitHub Pages live demo](https://ankitgupta2006.github.io/campus-skill-exchange/).
+### Option 1: Open directly
 
-## Data and Privacy Note
+Open `index.html` in a modern browser. Most demo features work directly from the local file system, although browser storage behavior may vary by browser security settings.
 
-This demo stores registered profiles, login sessions, and exchange requests in the browser's `localStorage`. The data is local to the browser and is not synchronized between devices. The project is intended for learning and prototyping only and should not be used with real passwords or sensitive personal information without a secure backend, encrypted password handling, and proper authentication.
+### Option 2: Run a local server
+
+From the project root, run:
+
+```bash
+python3 -m http.server 4173
+```
+
+Then open:
+
+```text
+http://localhost:4173/
+```
+
+## Data and Privacy
+
+This is a front-end learning and prototyping project. Registered profiles, login sessions, administrator sessions, and exchange requests are stored in the browser's `localStorage`. Data is not synchronized between devices or users.
+
+Do not use real passwords, private student information, or production credentials with this demo. A production release should replace the browser-only storage with a secure backend, hashed passwords, server-side authorization, validation, and protected API routes.
 
 ## License
 
