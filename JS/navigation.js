@@ -20,6 +20,12 @@ function addSessionNavigation() {
   const navigation = document.querySelector("header nav");
   if (!navigation) return;
 
+  const currentFile = window.location.pathname.split("/").pop() || "index.html";
+  navigation.querySelectorAll("a").forEach((link) => {
+    const linkFile = link.getAttribute("href")?.split("/").pop();
+    if (linkFile === currentFile) link.classList.add("active-link");
+  });
+
   const loggedInUser = getLoggedInUser();
   const loginLink = navigation.querySelector('a[href$="login.html"]');
   const registerLink = navigation.querySelector('a[href$="register.html"]');

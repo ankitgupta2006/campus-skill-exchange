@@ -222,7 +222,8 @@ if (!currentUser) {
     updateRequestStatus(Number(button.dataset.requestId), status, currentUser);
   });
 
-  document.getElementById("logoutButton").addEventListener("click", () => {
+  const logoutButton = document.getElementById("logoutButton");
+  logoutButton?.addEventListener("click", () => {
     localStorage.removeItem(LOGGED_IN_USER_KEY);
     window.location.href = "login.html";
   });

@@ -247,3 +247,13 @@ document
   });
 
 displayProfiles(getProfiles());
+
+const incomingSkill = new URLSearchParams(window.location.search).get("skill");
+const incomingSearch = new URLSearchParams(window.location.search).get("search");
+if (incomingSkill || incomingSearch) {
+  const input = document.getElementById("searchInput");
+  if (input) {
+    input.value = incomingSearch || incomingSkill;
+    searchProfiles();
+  }
+}

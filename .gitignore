@@ -1,0 +1,7 @@
+# Local editor and OS files
+.DS_Store
+.vscode/
+.idea/
+# Preview and generated files
+node_modules/
+*.log
